@@ -4,7 +4,6 @@ export default function CustomButton(props){
         <LoadingButton
         {...props}
         type="submit"
-        fullWidth
         loading={props.loading}
         variant="contained"
       >

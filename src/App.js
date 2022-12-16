@@ -8,9 +8,9 @@ function App() {
   const [loading,setLoading]=React.useState(false);
   const [comdata,setComdata]=React.useState([["Word","Frequency"]]);
   return (
-    <div className="App" style={style.App.maindivtag}>
-      <header className="App-header">
-        <CustomButton 
+    <div style={style.App.maindivtag}>
+      <Histogram data={comdata}/>
+      <CustomButton 
         name="Calculate"
         loading={loading}
         onClick={()=>{
@@ -23,8 +23,6 @@ function App() {
             console.log("this is the error",err);
           })
         }}/>
-        <Histogram data={comdata}/>
-      </header>
     </div>
   );
 }
