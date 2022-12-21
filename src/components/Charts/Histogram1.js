@@ -25,10 +25,12 @@ export default function Histogram(props) {
       barSize={100}
     >
       <Legend verticalAlign="top" height={36}/>
-      <XAxis dataKey="name" height={50}>
-        <Label value="Counts of Words" offset={0} position="insideBottom" />
+      <XAxis dataKey="name" height={40}>
+        <Label value="Words" offset={0} position="insideBottom" />
       </XAxis>
-      <YAxis />
+      <YAxis width={75}>
+      <Label value="Count" offset={0} position="insideLeft" />
+      </YAxis>
       <Tooltip />
       <CartesianGrid strokeDasharray="3 3" />
       <Bar dataKey="count" fill="#8884d8" background={{ fill: "#eee" }} />
