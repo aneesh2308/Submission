@@ -4,19 +4,17 @@ export default function DataFormat(data){
     var freqMap = [];
     words.forEach(function(w) {
         w=w.toLowerCase();
-        if (!freqMap[w]) {
+        if (!freqMap[w] && w!=='' && w!==' '&& w!=='.' && w!=='?' && w!==':' && w!=='"' && w!=='/') {
             freqMap[w] = 0;
         }
         freqMap[w] += 1;
     });
-    console.log(freqMap);
     var setdata=[];
     for (const [key, value] of Object.entries(freqMap)) {
       if(typeof value==='number')
-      setdata.push([key.toString(),value]);
+      setdata.push({name:key.toString(),count:value});
     }
-    setdata.sort(function(a, b){return b[1] - a[1]});
+    setdata.sort(function(a, b){return b.count - a.count});
     setdata=_.slice(setdata,[0],[20]);
-    setdata.unshift(["Word","Frequency"]);
     return setdata;
 }
