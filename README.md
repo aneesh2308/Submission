@@ -69,3 +69,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# Submission" 
+
+### Components of the Code
+I have made the code into sections, one the button when presses takes the input from the link and then it is acted upon to get the maximum count of words in the file and then in the next section I have passed this data in the histogram inputs to get the final result
+
+### Libraries used in project
+I used the MUI(Material UI) library for designing and I have used the react-google-charts library for displaying the data in histogram and for data manipulation and some changes I have used lodash
